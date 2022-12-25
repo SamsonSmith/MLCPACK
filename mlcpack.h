@@ -1,5 +1,5 @@
-#ifndef MLPACK_H
-#define MLPACK_H
+#ifndef MLCPACK_H
+#define MLCPACK_H
 
 #include <iostream>
 #include <fstream>
@@ -24,7 +24,7 @@
 
 using namespace std;
 
-class mlpack {
+class mlcpack {
 	private :
 	    //Hidden
 		vector<pair<string, vector<float>>> trainData; //Pass data type of Training sets
@@ -33,8 +33,8 @@ class mlpack {
 		bool compare_float(float x, float y);
 		bool compare_string(string x, string y);
 	public :
-		mlpack();
-		~mlpack();
+		mlcpack();
+		~mlcpack();
 	    void select(int algorithm);
 		void outPutType(void *);//Pass data type of return type
 		void totalColumn(int colCnt);//Training set total entries type
@@ -44,4 +44,4 @@ class mlpack {
 		
 };
 
-#endif /* MLPACK_H */
+#endif /* MLCPACK_H */
