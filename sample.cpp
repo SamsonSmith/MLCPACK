@@ -10,17 +10,31 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
-	mlcpack obj;
-	obj.select(RandomRegressor);
-	obj.fit(DB_NAME1);
-	cout<<"Predicted value for the Entered Col Indexes and Input value : "<<obj.predict(0, 3, 125.2);
+	mlcpack obj1;
+	obj1.select(RandomRegressor);
+	obj1.loadTrainDb(DB_NAME1);
+	obj1.totalColumn(4);
+	//obj1.outPutType(float);//Not Required obtain from predicted column, default is float.
+	obj1.fit(0,3);
+	cout<<"Predicted value for the Entered Col Indexes and Input value : "<<obj1.predict(144.2);
+	cout<<"\n";
 	
-	obj.select(SoftMaxRegressor);
-	obj.fit(DB_NAME1);
-	cout<<"Predicted value for the Entered Col Indexes and Input value : "<<obj.predict(1, 3, 63.6);
+	mlcpack obj2;
+	obj2.select(SoftMaxRegressor);
+	obj2.loadTrainDb(DB_NAME1);
+	obj2.totalColumn(4);
+	//obj2.outPutType(float);//Not Required obtain from predicted column, default is float.
+	obj2.fit(1,3);
+	cout<<"Predicted value for the Entered Col Indexes and Input value : "<<obj2.predict(61.6);
+	cout<<"\n";
 	
-	obj.select(DecisionTreeRegressor);
-	obj.fit(DB_NAME1);
-	cout<<"Predicted value for the Entered Col Indexes and Input value : "<<obj.predict(2, 3, 934.1);
+	mlcpack obj3;
+	obj3.select(DecisionTreeRegressor);
+	obj3.loadTrainDb(DB_NAME1);
+	obj3.totalColumn(4);
+	//obj3.outPutType(float);//Not Required obtain from predicted column, default is float.
+	obj3.fit(2,3);
+	cout<<"Predicted value for the Entered Col Indexes and Input value : "<<obj3.predict(1262.1);
+	cout<<"\n";
 	return 0;
 }
