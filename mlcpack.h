@@ -28,10 +28,12 @@ class mlcpack {
 	private :
 	    //Hidden
 		vector<pair<string, vector<float>>> trainData; //Pass data type of Training sets
-		int alg, colCount, indexX, indexY;
+		int alg, colCount, indexX, indexY, 	minValue, maxValue;
 		string dataset;
 		bool compare_float(float x, float y);
 		bool compare_string(string x, string y);
+		void findMinValue();
+		void findMaxValue();
 	public :
 		mlcpack();
 		~mlcpack();
@@ -40,7 +42,7 @@ class mlcpack {
 		void totalColumn(int colCnt);//Training set total entries type
 		void loadTrainDb(string fileName);
 		void fit(int colX, int colY);//Training set file
-		float predict(float UserValue);//Final predicted output
+		float predict(float UserValue);;//Final predicted output
 	//protected : Hidden
 		
 };
