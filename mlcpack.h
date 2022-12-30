@@ -40,7 +40,7 @@ class mlcpack {
 		void totalColumn(int colCnt);//Training set total entries type
 		void loadTrainDb(string fileName);
 		void fit(int colX, int colY);//Training set file
-		float predict(float UserValue);;//Final predicted output
+		float predict(float UserValue);//Final predicted output
 	//protected : Hidden
 		
 };
