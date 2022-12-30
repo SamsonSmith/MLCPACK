@@ -1,2 +1,4 @@
 Machine Learning Algorithm Library using C++.
-ARM64GNULinux G++ compiler.
+Suitable for ARM64GNULinux G++ compiler.
+Only for supervised machine learning algorithms.
+Only limited limited ML algorithms exists.
